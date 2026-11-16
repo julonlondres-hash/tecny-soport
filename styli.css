@@ -1177,3 +1177,69 @@ td {
         font-size: 0;
     }
 }
+
+/* BOTÓN CERRAR SESIÓN */
+.sidebar .logout-button {
+    display: block;
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: auto;
+    padding: 13px;
+    background: rgba(255, 85, 116, .08);
+    border: 1px solid rgba(255, 85, 116, .25);
+    color: var(--red);
+    border-radius: 9px;
+    font-weight: 600;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar .logout-button:hover {
+    background: rgba(255, 85, 116, .18);
+}
+
+/* BOTONES DE GESTIÓN DE SOLICITUDES */
+.request-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tool-button {
+    padding: 11px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #14243e;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.tool-button:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    transform: translateY(-2px);
+}
+
+.tool-button.primary {
+    background: linear-gradient(110deg, #1267ec, #00aef4);
+    border: none;
+    color: white;
+}
+
+.tool-button.danger {
+    border-color: rgba(255, 85, 116, .3);
+    color: var(--red);
+}
+
+@media (max-width: 600px) {
+    .request-tools {
+        flex-direction: column;
+    }
+
+    .tool-button {
+        width: 100%;
+    }
+}
